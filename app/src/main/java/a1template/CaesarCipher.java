@@ -19,7 +19,7 @@ public class CaesarCipher {
      * @param offset Offset to use when creating `cipher` of DynamicArray type
      */
     CaesarCipher(int offset){
-        // Fill in here
+        
     }
 
     /** Implementation of linear search that looks through the alphabet

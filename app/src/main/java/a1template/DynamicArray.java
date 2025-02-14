@@ -4,15 +4,46 @@ package a1template;
 
 public class DynamicArray<T> implements IndexAccess<T>{
     
-    // What instance variables do you need?
+    // Attributes of DynamicArray
+    // Uninitialized array of generic type, int for highest index, int for lowest index
     private T[] array;
     private int high;
     private int low;
-    // Write a constructor to make a new DynamicArray Object from an array
+
+    /**
+     * Constructs a DynamicArray object of length len and generic type
+     * @param len int for length of array
+     */
+    @SuppressWarnings("unchecked")
     public DynamicArray(int len){
-        this.array = Array.newInstance();
+        this.array = (T[]) new Object[len];
+        this.low = 0;
+        this.high = len-1;
 
     }
-    // Now implement the methods from IndexAccess?
 
+    /** Returns the value stored at a given index
+     * @param i index of element to read
+     * @return value stored at the given index
+     */
+    public T get(int i){
+        return this.array[i];
+    }
+
+    /** Returns the value stored at a given index plus the offset
+     * @param i index of element to read
+     * @param offset adjust index by this value
+     * @return value stored at the given index
+     */
+    public T get(int i, int offset){
+        return this.array[i+offset];
+    }
+
+    /** Stores the given value at the given index
+     * @param i index of locaßtion to store
+     * @param val value to store at given index
+     */
+    public void set(int i, T newValue){
+        this.array[i]= newValue;
+    }
 }

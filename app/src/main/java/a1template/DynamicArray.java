@@ -7,6 +7,7 @@ public class DynamicArray<T> implements IndexAccess<T>{
     // Attributes of DynamicArray
     // Uninitialized array of generic type, int for highest index, int for lowest index
     private T[] array;
+    private int offset;
     private int high;
     private int low;
 
@@ -15,10 +16,12 @@ public class DynamicArray<T> implements IndexAccess<T>{
      * @param len int for length of array
      */
     @SuppressWarnings("unchecked")
-    public DynamicArray(int len){
-        this.array = (T[]) new Object[len];
-        this.low = 0;
-        this.high = len-1;
+    public DynamicArray(int offset, T[] arrayT){
+        this.offset = offset;
+        this.array = (T[]) new Object[arrayT.length];
+        for(int i = 0; i<arrayT.length; i++){
+            this.array[i]=arrayT[i];
+        }
 
     }
 

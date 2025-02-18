@@ -31,14 +31,16 @@ Your readme should include the following information. Each student needs to subm
 
 Programming Partner Name: Ruby
 
-Other Collaborators (and kudos to people who were especially helpful):
+Other Collaborators (and kudos to people who were especially helpful): Vivian, Professor Hia
 
 References Used:
 
 ## Reflection Questions
 
 What was your favorite part of this assignment?
+My favorite part of the assignment was working with Ruby and working through the issues in the code together. I have worked with Ruby in the past and I really enjoy the challenge of talking through code andf sharing our perspectives until we find the correct answer.
 
 What was most challenging about this assignment?
+The most challenging part of this assignment was initializing the dynamic array and array list in the CeasarCipher class. I didn't realize at first that the DynamicArray constructor would be so pivotal in the CaesarCipher class because I was thinking of them too separately. Once Ruby and I (with some help from Vivian) realized how we were supposed to set up the alphabet and cipher arrays, the whole assignment felt easier.
 
-General comments on your experience with this assignment:
+General comments on your experience with this assignment: I felt that the instructions weren't very clear, so I spent a lot of time confused and the new Gradle interface/files, added a lot of confusion to the project.

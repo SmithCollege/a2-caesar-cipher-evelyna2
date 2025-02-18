@@ -64,7 +64,7 @@ public class CaesarCipher {
     /**
      * Encode a message using the cipher
      * 
-     * @param T message to encode
+     * @param String message to encode
      * @return encoded message
      */
     public String encode(String message) {
@@ -87,7 +87,6 @@ public class CaesarCipher {
      * Decode a message using the cipher
      * 
      * @param String message to decode
-     * @param int    key to use in decoding
      * @return decoded message
      */
     public String decode(String message) {

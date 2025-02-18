@@ -10,14 +10,14 @@ public class DynamicArrayTests {
     Character[] alphabet;
     Integer[] count;
 
-    public void createAlphabet(){
+    public void createAlphabet() {
         this.alphabet = new Character[26];
         for (int i = 0; i < 26; i++) {
             alphabet[i] = Character.valueOf((char) ('a' + i));
         }
     }
 
-    public void createCount(){
+    public void createCount() {
         this.count = new Integer[10];
         for (int i = 0; i < 10; i++) {
             count[i] = Integer.valueOf(i);
@@ -40,7 +40,7 @@ public class DynamicArrayTests {
         createCount();
 
         DynamicArray<Integer> numberTest = new DynamicArray<Integer>(0, this.count);
-        assertEquals("Is a returned by the 0 index?", numberTest.get(0) == 0);
+        assertTrue("Is a returned by the 0 index?", numberTest.get(0) == 0);
         assertTrue("Is z returned by the 9th index?", numberTest.get(9) == 9);
     }
 
@@ -71,6 +71,5 @@ public class DynamicArrayTests {
         assertTrue("Is 5 returned by the 0 index?", numberTest.get(0, 5) == 5);
         assertTrue("Is 0 returned by the -5 index?", numberTest.get(-5, 5) == 0);
     }
-
 
 }

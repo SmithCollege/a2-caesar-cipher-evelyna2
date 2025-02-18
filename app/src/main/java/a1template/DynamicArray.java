@@ -15,7 +15,8 @@ public class DynamicArray<T> implements IndexAccess<T> {
     /**
      * Constructs a DynamicArray object of length len and generic type
      * 
-     * @param len int for length of array
+     * @param offset int for offset value
+     * @param arrayT T[] for initializing array
      */
     @SuppressWarnings("unchecked")
     public DynamicArray(int offset, T[] arrayT) {
@@ -31,7 +32,7 @@ public class DynamicArray<T> implements IndexAccess<T> {
      * Returns the value stored at a given index
      * 
      * @param i index of element to read
-     * @return value stored at the given index
+     * @return T value stored at the given index
      */
     public T get(int i) {
         return this.array[i];
@@ -54,10 +55,16 @@ public class DynamicArray<T> implements IndexAccess<T> {
      * @param i   index of locaßtion to store
      * @param val value to store at given index
      */
-    public void set(int i, T newValue) {
+    public void set(int i, T val) {
         this.array[i] = newValue;
     }
 
+    /**
+     * Traverses the array and returns the index of a value 
+     * 
+     * @param val T for value searching for
+     * @return int for index found or -1 if not found
+     */
     public int indexOf(T val) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == val) {

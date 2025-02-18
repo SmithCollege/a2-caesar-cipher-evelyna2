@@ -56,11 +56,11 @@ public class DynamicArray<T> implements IndexAccess<T> {
      * @param val value to store at given index
      */
     public void set(int i, T val) {
-        this.array[i] = newValue;
+        this.array[i] = val;
     }
 
     /**
-     * Traverses the array and returns the index of a value 
+     * Traverses the array and returns the index of a value
      * 
      * @param val T for value searching for
      * @return int for index found or -1 if not found
